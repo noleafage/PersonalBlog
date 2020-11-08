@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客</title>
+    <link rel="stylesheet" href="./css/map.css">
+    <script crossorigin="anonymous" integrity="sha384-9d6EoIG8j0F+9F5p67DNMlqMAD7yIgbW+snoBoe3B7bP/Q/rUBECFlPKV0WBTMui" src="https://lib.baomitu.com/vue/2.6.10/vue.common.dev.js"></script>
+</head>
+<body>
+    <h1>个人博客's Map</h1>
+    <div><a href="/">个人博客首页</a>>>地图</div>
+    <div>
+        <h2>最新文章</h2>
+        <ul id="blog_list">
+            <li v-for="(key,index) in blogList" ><a style="cursor: pointer;" @click="jumpTo(key.id)">{{key.title}}</a></li>
+        </ul>
+    </div>
+    <script src="./js/axios.js"></script>
+    <script src="./js/map.js"></script>
+</body>
+</html>
